@@ -34,6 +34,7 @@
             <li><a href="#jilguero">Jilguero</a></li>
             <li><a href="#cenzontle">Cenzontle</a></li>
           </ol>
+
          </nav>
      </header>
       <!-- main es la sección principal que contiene  el contenido central. 
@@ -79,7 +80,45 @@
              
             
         </section>
+        <section>
+            <h2>Formulario de suscripción</h2>
+            <p>Rellena el formulario para suscribirte al sitio web.</p>
+            <!-- Formulario de contacto -->
+             <form>
+                <!-- label es una etiqueta que nos sirve para asociar un texto descriptivo
+                 a un elemento de entrada.
+                 El atributo for en label ayuda a vincularlo con un elemento de formulario específico
+                 ya que el atributo for contiene el valor del id del campo de entrada con el cual
+                 se asocia -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+
+                <label for="asunto">Recibir novedades:</label>
+                <select id="asunto" required>
+                    <option>Si</option>
+                    <option>No</option>
+        
+                  
+                </select>
+
+                <label for="mensaje">Comentarios:</label>
+                <textarea 
+                    id="mensaje" 
+                    rows="5" 
+                    placeholder="Escribe un comentario" 
+                    required
+                >
+                </textarea>
+                <button type="submit"><span class="material-icons">send</span>Enviar</button>
+            </form>
+       </section>
+
+        
     </main>
+
     
 </body>
 </html>
