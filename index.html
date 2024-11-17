@@ -6,7 +6,7 @@
      <!-- Metadatos adicionales -->
      <meta name="author" content="Laura Vargas">
      <meta
-        name="description" content="Una página de mi proyecto final de html del bootcamp sobre etiquetas semánticas y 
+        name="description" content="Una página de mi proyecto final de html del bootcamp en Fronted sobre etiquetas semánticas,
         estructura básica de una página web y un formulario"  
      >
      <meta name="keywords"
@@ -19,9 +19,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link rel="icon" href="./assets/bird.ico" type="image/x-icon">
     <title>Aves de canto</title>
 </head>
 <body>
+
+    
     <!-- Header: sección superior de la página y generalmente incluye información introductoria,
      como el título y el menú de navegación -->
      <header>
@@ -85,34 +88,38 @@
             <p>Rellena el formulario para suscribirte al sitio web.</p>
             <!-- Formulario de contacto -->
              <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+                </div>
                 <!-- label es una etiqueta que nos sirve para asociar un texto descriptivo
                  a un elemento de entrada.
                  El atributo for en label ayuda a vincularlo con un elemento de formulario específico
                  ya que el atributo for contiene el valor del id del campo de entrada con el cual
                  se asocia -->
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
-
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" placeholder="ejemplo@correo.com" required>
-
-                <label for="asunto">Recibir novedades:</label>
-                <select id="asunto" required>
-                    <option>Si</option>
-                    <option>No</option>
-        
-                  
+                 <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" placeholder="ejemplo@correo.com" required>  
+                 </div>
+                 <div class="form-group">
+                    <label for="asunto">Recibir novedades:</label>
+                    <select id="asunto" required>
+                        <option>Si</option>
+                        <option>No</option>
+                   </div>
+                
                 </select>
+             <div class="form-group">
+                    <label for="mensaje">Comentarios:</label>
+                 <textarea 
+                id="mensaje" 
+                rows="5" 
+                placeholder="Escribe un comentario" 
+                required>
+                 </textarea>
+            </div>
 
-                <label for="mensaje">Comentarios:</label>
-                <textarea 
-                    id="mensaje" 
-                    rows="5" 
-                    placeholder="Escribe un comentario" 
-                    required
-                >
-                </textarea>
-                <button type="submit"><span class="material-icons">send</span>Enviar</button>
+                  <button type="submit"><span class="material-icons">send</span>Enviar</button>
             </form>
        </section>
 
